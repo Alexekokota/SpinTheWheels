@@ -26,7 +26,7 @@
 # Define required raylib variables
 PROJECT_NAME       ?= game
 RAYLIB_VERSION     ?= 5.0.0
-RAYLIB_PATH        ?= ..\..
+RAYLIB_PATH        ?= ../..
 
 # Define compiler path on Windows
 COMPILER_PATH      ?= C:/raylib/w64devkit/bin
@@ -155,7 +155,7 @@ ifeq ($(PLATFORM),PLATFORM_DESKTOP)
     endif
     ifeq ($(PLATFORM_OS),BSD)
         # FreeBSD, OpenBSD, NetBSD, DragonFly default compiler
-        CC = clang
+        CC = clang++
     endif
 endif
 ifeq ($(PLATFORM),PLATFORM_RPI)
@@ -182,240 +182,103 @@ ifeq ($(PLATFORM),PLATFORM_DESKTOP)
     ifeq ($(PLATFORM_OS),OSX)
         MAKE = make
     endif
+    ifeq ($(PLATFORM_OS),BSD)
+        MAKE = gmake
+    endif
+endif
+ifeq ($(PLATFORM),PLATFORM_RPI)
+    MAKE = make
+endif
+ifeq ($(PLATFORM),PLATFORM_WEB)
+    MAKE = make
 endif
 
-# Define compiler flags:
-#  -O0                  defines optimization level (no optimization, better for debugging)
-#  -O1                  defines optimization level
-#  -g                   include debug information on compilation
-#  -s                   strip unnecessary data from build -> do not use in debug builds
-#  -Wall                turns on most, but not all, compiler warnings
-#  -std=c99             defines C language mode (standard C from 1999 revision)
-#  -std=gnu99           defines C language mode (GNU C from 1999 revision)
-#  -Wno-missing-braces  ignore invalid warning (GCC bug 53119)
-#  -D_DEFAULT_SOURCE    use with -std=c99 on Linux and PLATFORM_WEB, required for timespec
-CFLAGS += -Wall -std=c++14 -D_DEFAULT_SOURCE -Wno-missing-braces
+# Define default C debug/release flags for compilation
+CFLAGS += -Wall -std=c++11
+
+# macOS disable warnings (too verbose)
+ifeq ($(PLATFORM_OS),OSX)
+    CFLAGS += -Wno-missing-braces -Wno-unused-function
+endif
+
+# Add custom include folder
+CFLAGS += -I$(RAYLIB_H_INSTALL_PATH)
 
 ifeq ($(BUILD_MODE),DEBUG)
-    CFLAGS += -g -O0
+    CFLAGS += -g -D_DEBUG
 else
-    CFLAGS += -s -O1
+    CFLAGS += -O1
 endif
 
-# Additional flags for compiler (if desired)
-#CFLAGS += -Wextra -Wmissing-prototypes -Wstrict-prototypes
+# Define standard compilation flags
 ifeq ($(PLATFORM),PLATFORM_DESKTOP)
+    LDFLAGS += -L$(RAYLIB_INSTALL_PATH) -L$(RAYLIB_RELEASE_PATH)
     ifeq ($(PLATFORM_OS),WINDOWS)
-        # resource file contains windows executable icon and properties
-        # -Wl,--subsystem,windows hides the console window
-        CFLAGS += $(RAYLIB_PATH)/src/raylib.rc.data
+        LDFLAGS += -lraylib -lopengl32 -lgdi32 -lwinmm -lkernel32 -Wl,--subsystem,windows
+        # Required for FPC 3.0.4: -Wl,--allow-multiple-definition
     endif
     ifeq ($(PLATFORM_OS),LINUX)
-        ifeq ($(RAYLIB_LIBTYPE),STATIC)
-            CFLAGS += -D_DEFAULT_SOURCE
-        endif
         ifeq ($(RAYLIB_LIBTYPE),SHARED)
-            # Explicitly enable runtime link to libraylib.so
-            CFLAGS += -Wl,-rpath,$(EXAMPLE_RUNTIME_PATH)
+            LDFLAGS += -Wl,-rpath,$(EXAMPLE_RUNTIME_PATH)
         endif
-    endif
-endif
-ifeq ($(PLATFORM),PLATFORM_RPI)
-    CFLAGS += -std=gnu99
-endif
-ifeq ($(PLATFORM),PLATFORM_WEB)
-    # -Os                        # size optimization
-    # -O2                        # optimization level 2, if used, also set --memory-init-file 0
-    # -s USE_GLFW=3              # Use glfw3 library (context/input management)
-    # -s ALLOW_MEMORY_GROWTH=1   # to allow memory resizing -> WARNING: Audio buffers could FAIL!
-    # -s TOTAL_MEMORY=16777216   # to specify heap memory size (default = 16MB)
-    # -s USE_PTHREADS=1          # multithreading support
-    # -s WASM=0                  # disable Web Assembly, emitted by default
-    # -s EMTERPRETIFY=1          # enable emscripten code interpreter (very slow)
-    # -s EMTERPRETIFY_ASYNC=1    # support synchronous loops by emterpreter
-    # -s FORCE_FILESYSTEM=1      # force filesystem to load/save files data
-    # -s ASSERTIONS=1            # enable runtime checks for common memory allocation errors (-O1 and above turn it off)
-    # --profiling                # include information for code profiling
-    # --memory-init-file 0       # to avoid an external memory initialization code file (.mem)
-    # --preload-file resources   # specify a resources folder for data compilation
-    CFLAGS += -Os -s USE_GLFW=3 -s TOTAL_MEMORY=16777216 --preload-file resources
-    ifeq ($(BUILD_MODE), DEBUG)
-        CFLAGS += -s ASSERTIONS=1 --profiling
-    endif
-
-    # Define a custom shell .html and output extension
-    CFLAGS += --shell-file $(RAYLIB_PATH)/src/shell.html
-    EXT = .html
-endif
-
-# Define include paths for required headers
-# NOTE: Several external required libraries (stb and others)
-INCLUDE_PATHS = -I. -I$(RAYLIB_PATH)/src -I$(RAYLIB_PATH)/src/external
-ifneq ($(wildcard /opt/homebrew/include/.*),)
-    INCLUDE_PATHS += -I/opt/homebrew/include
-endif
-
-# Define additional directories containing required header files
-ifeq ($(PLATFORM),PLATFORM_RPI)
-    # RPI required libraries
-    INCLUDE_PATHS += -I/opt/vc/include
-    INCLUDE_PATHS += -I/opt/vc/include/interface/vmcs_host/linux
-    INCLUDE_PATHS += -I/opt/vc/include/interface/vcos/pthreads
-endif
-ifeq ($(PLATFORM),PLATFORM_DESKTOP)
-    ifeq ($(PLATFORM_OS),BSD)
-        # Consider -L$(RAYLIB_H_INSTALL_PATH)
-        INCLUDE_PATHS += -I/usr/local/include
-    endif
-    ifeq ($(PLATFORM_OS),LINUX)
-        # Reset everything.
-        # Precedence: immediately local, installed version, raysan5 provided libs -I$(RAYLIB_H_INSTALL_PATH) -I$(RAYLIB_PATH)/release/include
-        INCLUDE_PATHS = -I$(RAYLIB_H_INSTALL_PATH) -isystem. -isystem$(RAYLIB_PATH)/src -isystem$(RAYLIB_PATH)/release/include -isystem$(RAYLIB_PATH)/src/external
-    endif
-endif
-
-# Define library paths containing required libs.
-LDFLAGS = -L.
-
-ifneq ($(wildcard $(RAYLIB_RELEASE_PATH)/.*),)
-    LDFLAGS += -L$(RAYLIB_RELEASE_PATH)
-endif
-ifneq ($(wildcard $(RAYLIB_PATH)/src/.*),)
-    LDFLAGS += -L$(RAYLIB_PATH)/src
-endif
-ifneq ($(wildcard /opt/homebrew/lib/.*),)
-    LDFLAGS += -L/opt/homebrew/lib
-endif
-
-ifeq ($(PLATFORM),PLATFORM_DESKTOP)
-    ifeq ($(PLATFORM_OS),BSD)
-        # Consider -L$(RAYLIB_INSTALL_PATH)
-        LDFLAGS += -L. -Lsrc -L/usr/local/lib
-    endif
-    ifeq ($(PLATFORM_OS),LINUX)
-        # Reset everything.
-        # Precedence: immediately local, installed version, raysan5 provided libs
-        LDFLAGS = -L. -L$(RAYLIB_INSTALL_PATH) -L$(RAYLIB_RELEASE_PATH)
-    endif
-endif
-
-ifeq ($(PLATFORM),PLATFORM_RPI)
-    LDFLAGS += -L/opt/vc/lib
-endif
-
-# Define any libraries required on linking
-# if you want to link libraries (libname.so or libname.a), use the -lname
-ifeq ($(PLATFORM),PLATFORM_DESKTOP)
-    ifeq ($(PLATFORM_OS),WINDOWS)
-        # Libraries for Windows desktop compilation
-        # NOTE: WinMM library required to set high-res timer resolution
-        LDLIBS = -lraylib -lopengl32 -lgdi32 -lwinmm
-        # Required for physac examples
-        #LDLIBS += -static -lpthread
-    endif
-    ifeq ($(PLATFORM_OS),LINUX)
-        # Libraries for Debian GNU/Linux desktop compiling
-        # NOTE: Required packages: libegl1-mesa-dev
-        LDLIBS = -lraylib -lGL -lm -lpthread -ldl -lrt
-        
-        # On X11 requires also below libraries
-        LDLIBS += -lX11
-        # NOTE: It seems additional libraries are not required any more, latest GLFW just dlopen them
-        #LDLIBS += -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor
-        
-        # On Wayland windowing system, additional libraries requires
+        LDFLAGS += -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
         ifeq ($(USE_WAYLAND_DISPLAY),TRUE)
-            LDLIBS += -lwayland-client -lwayland-cursor -lwayland-egl -lxkbcommon
+            LDFLAGS += -lwayland-client -lwayland-cursor -lwayland-egl -lxkbcommon
         endif
-        # Explicit link to libc
-        ifeq ($(RAYLIB_LIBTYPE),SHARED)
-            LDLIBS += -lc
+        ifeq ($(USE_EXTERNAL_GLFW),TRUE)
+            LDFLAGS += -lglfw
         endif
     endif
     ifeq ($(PLATFORM_OS),OSX)
-        # Libraries for OSX 10.9 desktop compiling
-        # NOTE: Required packages: libopenal-dev libegl1-mesa-dev
-        LDLIBS = -lraylib -framework OpenGL -framework OpenAL -framework Cocoa -framework IOKit
+        ifeq ($(RAYLIB_LIBTYPE),SHARED)
+            LDFLAGS += -rpath @executable_path
+        endif
+        LDFLAGS += -lraylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
     endif
     ifeq ($(PLATFORM_OS),BSD)
-        # Libraries for FreeBSD, OpenBSD, NetBSD, DragonFly desktop compiling
-        # NOTE: Required packages: mesa-libs
-        LDLIBS = -lraylib -lGL -lpthread -lm
-
-        # On XWindow requires also below libraries
-        LDLIBS += -lX11 -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor
-    endif
-    ifeq ($(USE_EXTERNAL_GLFW),TRUE)
-        # NOTE: It could require additional packages installed: libglfw3-dev
-        LDLIBS += -lglfw
+        ifeq ($(RAYLIB_LIBTYPE),SHARED)
+            LDFLAGS += -Wl,-rpath,$(EXAMPLE_RUNTIME_PATH)
+        endif
+        LDFLAGS += -lraylib -lGL -lm -lpthread -lrt -lX11
+        ifeq ($(USE_EXTERNAL_GLFW),TRUE)
+            LDFLAGS += -lglfw
+        endif
     endif
 endif
 ifeq ($(PLATFORM),PLATFORM_RPI)
-    # Libraries for Raspberry Pi compiling
-    # NOTE: Required packages: libasound2-dev (ALSA)
-    LDLIBS = -lraylib -lbrcmGLESv2 -lbrcmEGL -lpthread -lrt -lm -lbcm_host -ldl
+    # required for RPI compilation
+    CFLAGS += -DPLATFORM_RPI -D_GNU_SOURCE -I/opt/vc/include -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux
+    ifeq ($(USE_RPI_CROSS_COMPILER),TRUE)
+        LDFLAGS += -L$(RPI_TOOLCHAIN)/lib
+    endif
+    LDFLAGS += -L/opt/vc/lib -lraylib -lbrcmEGL -lbrcmGLESv2 -lbcm_host -lvcos -lvchiq_arm -lm -lpthread -lrt
 endif
 ifeq ($(PLATFORM),PLATFORM_WEB)
-    # Libraries for web (HTML5) compiling
-    LDLIBS = $(RAYLIB_RELEASE_PATH)/libraylib.bc
+    CFLAGS += -Os --no-heap-copy --preload-file resources -s USE_GLFW=3 -s TOTAL_MEMORY=16777216 -s ALLOW_MEMORY_GROWTH=1
+    LDFLAGS += -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 --shell-file $(RAYLIB_PATH)/src/shell.html
 endif
-
-# Define a recursive wildcard function
-rwildcard=$(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2) $(filter $(subst *,%,$2),$d))
 
 # Define all source files required
-SRC_DIR = src
-OBJ_DIR = obj
+SRCS := $(wildcard src/*.c) $(wildcard src/*.cpp)
+OBJS := $(SRCS:.c=.o) $(SRCS:.cpp=.o)
 
-# Define all object files from source files
-SRC = $(call rwildcard, *.c, *.h)
-#OBJS = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
-OBJS ?= main.c
+all: $(PROJECT_NAME)
 
-# For Android platform we call a custom Makefile.Android
-ifeq ($(PLATFORM),PLATFORM_ANDROID)
-    MAKEFILE_PARAMS = -f Makefile.Android 
-    export PROJECT_NAME
-    export SRC_DIR
-else
-    MAKEFILE_PARAMS = $(PROJECT_NAME)
-endif
-
-# Default target entry
-# NOTE: We call this Makefile target or Makefile.Android target
-all:
-	$(MAKE) $(MAKEFILE_PARAMS)
-
-# Project target defined by PROJECT_NAME
+# Compile and link binary
 $(PROJECT_NAME): $(OBJS)
-	$(CC) -o $(PROJECT_NAME)$(EXT) $(OBJS) $(CFLAGS) $(INCLUDE_PATHS) $(LDFLAGS) $(LDLIBS) -D$(PLATFORM)
+	@echo "Compiling..."
+	$(CC) $(OBJS) -o $@ $(LDFLAGS)
 
 # Compile source files
-# NOTE: This pattern will compile every module defined on $(OBJS)
-#%.o: %.c
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) -c $< -o $@ $(CFLAGS) $(INCLUDE_PATHS) -D$(PLATFORM)
+%.o: %.c
+	@echo "Compiling $<..."
+	$(CC) -c $< -o $@ $(CFLAGS)
 
-# Clean everything
+%.o: %.cpp
+	@echo "Compiling $<..."
+	$(CC) -c $< -o $@ $(CFLAGS)
+
+# Clean up object files and binary
 clean:
-ifeq ($(PLATFORM),PLATFORM_DESKTOP)
-    ifeq ($(PLATFORM_OS),WINDOWS)
-		del *.o *.exe /s
-    endif
-    ifeq ($(PLATFORM_OS),LINUX)
-	find -type f -executable | xargs file -i | grep -E 'x-object|x-archive|x-sharedlib|x-executable' | rev | cut -d ':' -f 2- | rev | xargs rm -fv
-    endif
-    ifeq ($(PLATFORM_OS),OSX)
-		find . -type f -perm +ugo+x -delete
-		rm -f *.o
-    endif
-endif
-ifeq ($(PLATFORM),PLATFORM_RPI)
-	find . -type f -executable -delete
-	rm -fv *.o
-endif
-ifeq ($(PLATFORM),PLATFORM_WEB)
-	del *.o *.html *.js
-endif
-	@echo Cleaning done
-
+	@echo "Cleaning up..."
+	rm -f $(OBJS) $(PROJECT_NAME)
