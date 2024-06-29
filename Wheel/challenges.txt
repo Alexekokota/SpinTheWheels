@@ -1,44 +1,378 @@
-Take {X} if you{APOSTROPHE}ve ever been in a long online discussion or debate
-Give {X} for each time you went out partying this month
-Take {X} if you{APOSTROPHE}ve ever laughed so hard you cried
-Give {X} if you{APOSTROPHE}re single
-Give {Y} if you{APOSTROPHE}ve ever made out with someone to make someone else jealous
-Give {X} if you{APOSTROPHE}ve ever lost your keys
-Give {X} if you{APOSTROPHE}ve ever found something valuable that someone else lost
-Take {Z} if you speak French
-Take {X} if you{APOSTROPHE}ve peed in the last hour
-Give {X} if you{APOSTROPHE}re under 5{APOSTROPHE}8{APOSTROPHE}{APOSTROPHE}
-Take {X} if you{APOSTROPHE}ve ever had an allergic reaction
-Give {X} if you{APOSTROPHE}ve never been on a date
-Give {X} if you{APOSTROPHE}ve ever been dumped via text
-Give {X} if you{APOSTROPHE}re self-employed
-Take {X} if you{APOSTROPHE}re unemployed
-Take {X} if you play an instrument
-Give {X} if you{APOSTROPHE}ve been fired in the past year
-Take {Y} if you{APOSTROPHE}ve witnessed a meteor shower
-Give {X} if you{APOSTROPHE}ve witnessed a total eclipse
-Take {X} if you{APOSTROPHE}ve ever done jury duty
-Give {X} if you{APOSTROPHE}ve been in a car accident
-Give {X} if you{APOSTROPHE}ve swum in the sea
-Take {Y} if you{APOSTROPHE}d sleep with your own clone
-Take {X} if you{APOSTROPHE}ve ever tasted your own nut
-Give {X} if you believe in ghosts
-Give {Z} if you have ever had ice in an unwanted place
-Take {X} if you have a favorite world in VRChat
-WATERFALL!!
-Take {X} if you{APOSTROPHE}ve ever been to a music festival
-Give {X} if you{APOSTROPHE}ve ever commissioned art
-Take {X} if you{APOSTROPHE}ve ever been to therapy
-Give {X} if you like pineapple on pizza
-Take {X} if you{APOSTROPHE}ve ever blacked out in VR
-Give {X} if you{APOSTROPHE}ve ever tried becoming a Youtuber
-Take {X}
-Give {X}
-Take {X} if you{APOSTROPHE}ve used the same main avatar for over 6 months
-Give {X} if you{APOSTROPHE}ve ever been fishing
-Give {X} if you{APOSTROPHE}ve been to more than 5 countries
-Take {X} if you{APOSTROPHE}ve ever regretted doing a dare
-Give {X} if you{APOSTROPHE}ve ever participated in an online community
-Give {X} if you{APOSTROPHE}ve laughed so hard you spit out your drink
-Give {X} if you{APOSTROPHE}ve ever pissed yourself when drunk
-Give {X} if you{APOSTROPHE}ve ever kissed two or more people in the same day
+Take {Y} if you{APOSTROPHE}ve ever been in a long online discussion or debate  
+Give {X} for each time you went out partying this month  
+Take {X} if you{APOSTROPHE}ve ever laughed so hard you cried  
+Give {Y} if you{APOSTROPHE}re single  
+Take {Y} if your parents are still married  
+Take {X} if you have a tattoo  
+Take {X} if you{APOSTROPHE}ve clogged somebody else{APOSTROPHE}s toilet  
+Give {Z} if you{APOSTROPHE}ve ever made out with someone to make someone else jealous  
+Give {X} if you{APOSTROPHE}ve ever lost your keys  
+Give {Z} if you{APOSTROPHE}ve ever found something valuable that someone else lost  
+Take {Z} if you speak French  
+Everyone picks your Discord status  
+Jack, play Thunderstuck (only valid once a day)  
+Take {Y} for everyone here you think you could beat in a fight  
+Do 10 push-ups. Drink {X} on fail, give 10 on success  
+If you{APOSTROPHE}re born after 1996 and a Zoomer in denial, take {X}  
+Take {Z} if you{APOSTROPHE}ve peed in the last hour  
+Give {Y} if you{APOSTROPHE}re under 5{APOSTROPHE}8{APOSTROPHE}{APOSTROPHE}  
+Take {Y} if you{APOSTROPHE}ve ever had an allergic reaction  
+Give {Z} if you{APOSTROPHE}ve never been on a date  
+Give {Z} if you{APOSTROPHE}ve ever been dumped via text  
+Give {Y} if you{APOSTROPHE}re self-employed  
+Take {Z} if you{APOSTROPHE}re unemployed  
+Give {X} if you{APOSTROPHE}ve been fired in the past year  
+Take {Z} if you{APOSTROPHE}ve witnessed a meteor shower  
+Give {Z} if you{APOSTROPHE}ve witnessed a total eclipse  
+Take {Y} if you{APOSTROPHE}ve ever done jury duty  
+Give {Z} if you{APOSTROPHE}ve been in a car accident  
+Take {X} if you{APOSTROPHE}ve ever fallen asleep during sex  
+Give {X} if you{APOSTROPHE}ve swum in the sea  
+Take {X} if you{APOSTROPHE}d sleep with your own clone  
+Take {Y} if you{APOSTROPHE}ve ever tasted your own nut  
+Give {X} if you believe in ghosts  
+Give {X} if you have ever had ice in an unwanted place  
+Take {X} if you have a favorite world in VRChat  
+WATERFALL!!  
+Take {X} if you{APOSTROPHE}ve fallen in VR  
+Take {Y} if you{APOSTROPHE}ve ever been to a music festival  
+Give {X} if you{APOSTROPHE}ve ever commissioned art  
+Take {X} if you{APOSTROPHE}ve ever been to therapy  
+Give {Y} if you like pineapple on pizza  
+Apple users take {Y}  
+Android users take {X}  
+Take {X} for every vehicle you own
+Take {X} if you{APOSTROPHE}ve ever blacked out in VR  
+Give {X} if you{APOSTROPHE}ve ever tried becoming a Youtuber  
+Take {X}  
+Take {Y}  
+Take {Z}  
+Give {X}  
+Give {Y}  
+Give {Z}  
+Take {Y} if you{APOSTROPHE}ve used the same main avatar for over 6 months  
+Give {X} if you{APOSTROPHE}ve ever been fishing  
+Give {Z} if you{APOSTROPHE}ve been to more than 5 countries  
+Person who has visited the most states gives {X}  
+Spin again and double its result!  
+Spin again and triple its result!  
+Take {X} if you like Lego  
+Take {Y} if you{APOSTROPHE}ve ever regretted doing a dare  
+Give {X} if you{APOSTROPHE}ve ever participated in an online community  
+Give {Y} if you{APOSTROPHE}ve laughed so hard you spit out your drink  
+Give {Z} if you{APOSTROPHE}ve ever pissed yourself when drunk  
+Give {Y} if you{APOSTROPHE}ve ever kissed two or more people in the same day  
+Take {Z} if you{APOSTROPHE}ve ever done a colonic or enema  
+Give {X} if you have colored hair  
+Take {X} if you{APOSTROPHE}ve ever taken a personality test  
+Take {Z} if you have work tomorrow morning  
+Give {Y} if you{APOSTROPHE}ve ever role played in VRChat  
+Take {Y} if you{APOSTROPHE}ve had a relationship that lasted more than a year  
+Take {Z} if you{APOSTROPHE}ve ever displayed your own art in public  
+Take {Z} drinks if you{APOSTROPHE}ve tried Marmite or Vegemite  
+Give {X} drinks if you{APOSTROPHE}ve ever had a friends-with-benefits arrangement go wrong  
+Give {Y} if you{APOSTROPHE}ve ever been on a zip line  
+Take {X} if you simp for 2D characters more than 3D characters  
+Take {X} if you{APOSTROPHE}ve ever cracked your phone screen  
+Take {X} if you{APOSTROPHE}re American  
+Give {Y} if you{APOSTROPHE}re Canadian  
+Give {Z} if you{APOSTROPHE}re not from North America  
+Give {Z} if you{APOSTROPHE}ve ever had a pregnancy scare  
+Take {X} if you own a pet (people don{APOSTROPHE}t count)  
+Give {X} if you have siblings  
+You may only meow before speaking until your next turn, drink {X} on failure  
+You may only bark before speaking until your next turn, drink {X} on failure  
+Take {Y} if you{APOSTROPHE}ve ever had a sexy nickname  
+Take {Y} if you{APOSTROPHE}ve ever been to a book signing  
+Longest username gives {Z}  
+Shortest username gives {Z}  
+Most sober person at the wheel takes {Z}  
+Take {Y} if you{APOSTROPHE}ve ever gone home with someone from the bar  
+Alcoholics take {X} :)  
+Take {Y} if you{APOSTROPHE}ve ever changed your VRChat username  
+Give {X} if you{APOSTROPHE}ve ever been to Dunkin{APOSTROPHE} Donuts  
+Take {X} if you{APOSTROPHE}ve ever smoked weed  
+Give {Y} if you{APOSTROPHE}re not straight  
+Give {Z} if you{APOSTROPHE}ve ever had a threesome  
+Give {X} if you love BEANS  
+Give {Y} if your knees click  
+Drink for every Lovense toy you own  
+Take {Z} if you{APOSTROPHE}ve ever driven drunk or high  
+Take {Y} if you have 3 or more monitors  
+Oldest and youngest give {X} to anyone but each other  
+Give {Z} if you{APOSTROPHE}ve ever been arrested  
+Give {Y} if you{APOSTROPHE}ve ever been paintballing  
+Give {X} if you{APOSTROPHE}ve ever made art as a gift  
+Give {Y} if you know how to stitch  
+Give {Z} if you{APOSTROPHE}ve ever gone skinny dipping  
+Take {X} if you{APOSTROPHE}ve ever been on a rollercoaster  
+Give {Y} if you{APOSTROPHE}ve read a book in the last month  
+Victim: Everyone has to give their drinks from the next prompt to you  
+Drink D20  
+Drink D6  
+Drink D8  
+Drink D4  
+Drink D10  
+Give D100  
+Drink {Z} if you have not drunk from the past 3 questions  
+Take {Y} if you{APOSTROPHE}ve ever gone surfing  
+Give {X} if you{APOSTROPHE}ve ever had to delete a message quickly before someone saw it  
+Take {Y} if you wholeheartedly believe you could tame a wild animal (I.e., Eagle, Wolf, Tiger, Etc.)  
+Give {Z} if you{APOSTROPHE}ve ever had a tweet go viral  
+Give {Y} if you{APOSTROPHE}re a {APOSTROPHE}{APOSTROPHE}Silly little guy{APOSTROPHE}{APOSTROPHE}  
+Take {X} if you{APOSTROPHE}ve ever live-streamed  
+Give {Z} if you{APOSTROPHE}ve ever given a lap dance  
+Take {Y} if you{APOSTROPHE}ve ever sold something you made  
+Weebs take {Y}  
+Take {Z} if you{APOSTROPHE}ve done BDSM  
+Take {Y} if you{APOSTROPHE}re wearing mostly black  
+DM {APOSTROPHE}{APOSTROPHE}I{APOSTROPHE}m so horny{APOSTROPHE}{APOSTROPHE} to the last person that you{APOSTROPHE}ve messaged (Not in the trip) or take {Z}  
+Take {Y} if you{APOSTROPHE}ve been on a cruise  
+Take {Z} if you{APOSTROPHE}ve ever read a book in one sitting  
+Take {X} if you ever sent ***** to someone and FORGOT ABOUT IT the next day (Surprise sober you!!)  
+Take {Y} if you{APOSTROPHE}re single  
+Brats take {Z}. No backsass.  
+Hands up! Last person takes {Z}  
+Give {Y} if you still have an optical drive on your computer  
+Give {Y} if you{APOSTROPHE}ve danced for a VRC Club  
+Give {Z} if you{APOSTROPHE}ve never had a job  
+Give {Z} if you can{APOSTROPHE}t swim  
+Take {Z} if you{APOSTROPHE}ve ever had surgery  
+Take {Y} if you{APOSTROPHE}ve ever driven or sailed a boat, yar!  
+Give {Y} if you{APOSTROPHE}ve ever been to a drive-in movie  
+Give {Z} if you{APOSTROPHE}ve ever been on a flight longer than 8 hours  
+Give {Z} if you{APOSTROPHE}ve ever succeeded on a New Year{APOSTROPHE}s resolution  
+Take {Y} if you{APOSTROPHE}re missing any teeth other than wisdom teeth  
+Give {X} if you have all your wisdom teeth  
+Give {X} if you get hangovers  
+Stretch and spin again  
+Nothing happens. You just wasted your turn.  
+If you{APOSTROPHE}re in a relationship, give {X}  
+Give {X} if you{APOSTROPHE}ve ever had a crush on a friend{APOSTROPHE}s partner  
+Everyone take {X}!  
+Everyone take {Y}!  
+Everyone take {Z}!  
+Take {X} if you{APOSTROPHE}ve ever taken an art class  
+Good girls give {Y} drinks (sorry Goth)  
+If you have a steering wheel to play cars at home, give {Z}  
+Give {Z} if you{APOSTROPHE}ve ever been in a dance competition  
+Take {Y} if you{APOSTROPHE}ve tried moonshine  
+Give {X} if you{APOSTROPHE}ve ever had a wet dream about a celebrity  
+Take {Y} if you{APOSTROPHE}ve ever tried making your own bread  
+Take {X} if you{APOSTROPHE}ve never tried sushi  
+Take {X} if you{APOSTROPHE}ve been in a long-distance relationship  
+Take {X} if you{APOSTROPHE}ve had caffeine today  
+Stand on one leg until your next turn, if you put it down drink {Z}. Give {Z} on success  
+Give {Y} if you{APOSTROPHE}ve ever changed someone{APOSTROPHE}s mind in an online discussion  
+Give {Y} if you have more than 50 avatars uploaded  
+Give {X} if you{APOSTROPHE}ve cooked a roast  
+Give {X} for every waifu cup you own  
+Spinner makes a rule, lasts until their next turn  
+Give {Z} if you{APOSTROPHE}re missing your gallbladder  
+Lethal company dance break and spin again  
+Take {Y} if you have LED RGB lighting in your room  
+Take {X} if you{APOSTROPHE}ve never used a BBQ grill  
+Give {Y} if you{APOSTROPHE}ve ever had an internship  
+Go sit in a corner for a turn  
+Take {X} if you{APOSTROPHE}ve ever been attracted to an older person  
+Take {Z} if you{APOSTROPHE}ve ever cranked it to an NSFW channel  
+Give {X} if you have back problems  
+Take {X} if you{APOSTROPHE}ve ever uploaded a world  
+Take {X} if you speak Spanish  
+Take {Y} if you live by yourself  
+Take {X} if you think turkey is overrated  
+Give {Z} if you{APOSTROPHE}ve ever hosted a VRC event  
+Take {X} if you{APOSTROPHE}ve ever painted a picture  
+Give {Z} if you{APOSTROPHE}ve ever been attacked by a goose  
+Give {X} if you{APOSTROPHE}ve ever watched adult films with a partner  
+Give {Y} if you wear prescription glasses  
+Everyone take a water shot!  
+Give {X} if you{APOSTROPHE}ve ever collected vinyl records  
+Take {X} if you{APOSTROPHE}ve ever made a wish on a shooting star  
+Take {Z} if you{APOSTROPHE}ve eaten eel  
+Give {Y} if you{APOSTROPHE}re drinking spirits straight from the bottle  
+Give {Y} if you{APOSTROPHE}ve ever sold art  
+Take {X} if you{APOSTROPHE}ve ever been stargazing  
+Take {Z} if you{APOSTROPHE}ve ever paid for a dating app  
+Give {Y} if you can touch your toes without bending your knees  
+Take {X} if you only speak one language  
+Give {Z} if you{APOSTROPHE}ve ever met someone with the same first & last name as you  
+Give {Y} if you{APOSTROPHE}ve ever {APOSTROPHE}faked it{APOSTROPHE}
+Take {X} if you{APOSTROPHE}ve ever kissed someone of the same gender  
+Give {X} if you{APOSTROPHE}ve ridden a motorbike  
+Give {Y} if you{APOSTROPHE}ve ever hooked up with someone from a dating app  
+Take {Y} if you{APOSTROPHE}ve ever had to change a flat tire by yourself  
+Take {Z} if you{APOSTROPHE}ve ever broken a bone, weakling  
+Give {X} if you{APOSTROPHE}ve never broken a bone  
+Take {Y} if you{APOSTROPHE}ve tried psychedelics  
+Give {Z} if you{APOSTROPHE}ve been stood up on a date  
+Take {Z} if a shooting happened in your city this year and you also happen to live in Ohio  
+Give {X} if you{APOSTROPHE}ve ever sexted  
+Take {Y} if you{APOSTROPHE}ve never had a PB&J  
+Post a screenshot of your browser history to inebriation-chat or take {Z}  
+Draw from a card deck and drink that amount (Joker means redraw and give instead!)  
+Draw from a card deck and give that amount (Joker means redraw and double it!)  
+Sit on the floor until your next turn  
+Give {Z} if you ever had fairy bread  
+Take {Y} if you{APOSTROPHE}ve never blocked someone online  
+Give {Z} if you don{APOSTROPHE}t have a job  
+Give {Z} if you{APOSTROPHE}ve ever tried to impress someone and it failed miserably  
+Take {X} if you have maple syrup at home  
+Give {Z} if you{APOSTROPHE}re wearing anything with orange on it  
+Give {Y} if you{APOSTROPHE}ve ever called the police  
+Give {X} if someone in this room has seen you nude
+Take {X} for every country you{APOSTROPHE}ve been to  
+Take {X} if you{APOSTROPHE}re going commando  
+Take {Y} if you{APOSTROPHE}ve ever had a professional massage  
+Give {X} if you{APOSTROPHE}ve ever been to a national park  
+Give the player to your right a big hug, and both take {Y}  
+Give {Z} if you{APOSTROPHE}ve ever been catfished or catfished someone  
+Take {Z} if you{APOSTROPHE}ve ever had a psychic reading  
+Take {X} if you{APOSTROPHE}re horny  
+Give {Y} if someone has ever mistaken your country of origin  
+Give {X} if you{APOSTROPHE}re still friends with your ex  
+Give {X} if you{APOSTROPHE}ve ever worked in retail  
+Beer drinkers, take {Z}  
+Vodka drinkers, take {X}  
+Rum drinkers, take {X}  
+Whiskey drinkers, take {X}  
+Wine drinkers, take {Y}, you pompous asses  
+Give {X} if you{APOSTROPHE}ve ever overshared on main  
+Take {Y} if you{APOSTROPHE}ve ever planted a tree  
+Take {Z} if you{APOSTROPHE}ve cried in the past week  
+Give {Y} if someone has ever used a pickup line on you  
+Give {Y} if you{APOSTROPHE}ve ever spent an xmas without your family (2020 doesn{APOSTROPHE}t count!)  
+Take {Y} if you know how to shoot a bow and arrow  
+Take {Z} if you never caught COVID  
+Give {Z} if you{APOSTROPHE}ve ever been on a blind date  
+Give {Z} if wearing unmatching socks isn{APOSTROPHE}t an uncommon circumstance for you  
+If you{APOSTROPHE}re a switch, either give or take {Y}  
+Take {Y} if you{APOSTROPHE}ve ever sent a dirty message to the wrong chat  
+Give {Z} if you ever used MySpace  
+Take {Y} if you don{APOSTROPHE}t have a Facebook  
+Give {Y} if you{APOSTROPHE}re a DJ  
+Hector take {Z}  
+Hector give {Z}  
+Reaper take {Z}  
+Reaper give {Z}  
+Senpai give {Z}  
+Senpai take {Z}  
+Sara take {Z}  
+Sara give {Z}  
+Jack give {Z}  
+Jack take {Z}  
+Felix take {Z}  
+Felix give {Z}  
+Goth take {Z}  
+Goth give {Z}  
+Snow give {Z}  
+Snow take {Z}  
+Dreamzzz give {Z}  
+Dreamzzz take {Z}  
+Salty take {Z}  
+Salty give {Z}  
+Enju take {Z}  
+Enju give {Z}  
+Xyz give {Z}  
+Xyz take {Z}  
+Astro take {Z}  
+Astro give {Z}  
+Angel give {Z}  
+Angel take {Z}  
+Oog take {Z}  
+Oog give {Z}  
+Revan give {Z}  
+Revan take {Z}  
+Kuri give {Z}  
+Kuri take {Z}  
+SpriggenS take {Z}  
+SpriggenS give {Z}  
+Emtai give {Z}  
+Emtai take {Z}  
+All your drinks have to be water shots until your next turn  
+Give {Z} if you{APOSTROPHE}ve ever cut down a tree  
+Give {Y} if you can play an instrument  
+Challenge the player to your left to rock paper scissors. Loser takes {Z}  
+Give {X} if you{APOSTROPHE}re LGBTQ  
+Take {Y} if you don{APOSTROPHE}t have to take meds  
+Take {X} if you{APOSTROPHE}ve ever done a detox  
+Take {Z} if you forgot to take your meds  
+Name a song or artist. Anyone who{APOSTROPHE}s heard of it take {X}  
+Name a song or artist. Anyone who hasn{APOSTROPHE}t heard of it take {Y}  
+Take {Z} if you{APOSTROPHE}ve ever been on a road trip longer than 10 hours  
+You and the player to your left say a number from 1 to 3 at the same time. If you say the same, Give {Z} each. If not, you both take that amount  
+Take {Z} if you{APOSTROPHE}re a ketchup lover  
+Take {Y} if you think bacon is overrated  
+Take {Z} if you{APOSTROPHE}ve ever been backstage at a concert  
+Take {X} for every year you{APOSTROPHE}ve played VRChat  
+Everyone close your eyes and point. Everyone drinks the amount they were pointed at.  
+Wear the Dick & Nuts until your next turn  
+Take {Y} if you{APOSTROPHE}re barefoot  
+Give {Y} if you work more than 10 hours a day  
+If you can{APOSTROPHE}t legally drive take {X}, if that hasn{APOSTROPHE}t stopped you before take {Z} times 3  
+Take {Y} if you{APOSTROPHE}ve had a pet frog  
+Give {X} if you{APOSTROPHE}ve had a pet bird  
+Take {X} if you{APOSTROPHE}ve had a pet fish  
+Give {X} if you{APOSTROPHE}ve had a pet lizard  
+Take {X} if you{APOSTROPHE}ve had a pet rodent  
+Take {X} if you{APOSTROPHE}ve been to Timmies, eh?  
+Take {Y} if you have a Crunchyroll subscription  
+Take {Z} if you microwave your water  
+Take {Y} if you own stocks  
+Take {Z} if you own crypto
+Take {Y} if you{APOSTROPHE}ve played in an Esports tournament  
+Give {Z} if you{APOSTROPHE}ve been to the Middle East  
+Take however many your Shitty multiplier is  
+Take {Y} if you support a VRC creator on Patreon  
+Take {X} if you have an RGB keyboard  
+Take {Z} if you{APOSTROPHE}ve fought someone and won  
+Swallow {Y} if you swallow, give if you spit  
+Last person to UwU out loud takes {Z}  
+Give {Y} if you own an off-road vehicle  
+Oldest VRChat account gives {Z}  
+Youngest VRChat account takes {Z}  
+Take {Z} if you{APOSTROPHE}ve played VRC naked  
+Give {Y} if you know how to program  
+First to touch Hector{APOSTROPHE}s titty gives {Z} (You can{APOSTROPHE}t touch yourself, Hector)  
+Take {Y} if you{APOSTROPHE}ve ever fired a gun  
+Take {Y} if you{APOSTROPHE}re a sub  
+Give {Y} if you{APOSTROPHE}re a dom  
+Give {Z} if you{APOSTROPHE}ve ever gotten a speeding ticket  
+Give {Z} if you{APOSTROPHE}ve ever eaten frog. Please stop staring at Felix.  
+Give {X} if you{APOSTROPHE}ve ever used the word Bussy  
+Take {X} if you{APOSTROPHE}ve ever had a VRC romance  
+Give {Y} if you haven{APOSTROPHE}t been in a public instance in the past 2 weeks  
+Take {X} if you currently have simps  
+Give {X} if you{APOSTROPHE}re under 25  
+Take {X} if you{APOSTROPHE}re over 25  
+Give {Y} if you{APOSTROPHE}ve done BDSM  
+Give back the last amount of drinks to the person who gave them to you  
+Give {Y} if you finished an anime this month  
+Give {Z} if you{APOSTROPHE}ve tried IRN-BRU, SCOTLAND FOREVEERRRRRRRR  
+Give {X} if you can{APOSTROPHE}t handle spicy food  
+Take {Y} if you{APOSTROPHE}ve ever built something out of wood  
+If you are a danger to yourself, take {Z}  
+Take {Y} if you haven{APOSTROPHE}t enjoyed a long bath this year  
+Give {X} if you{APOSTROPHE}ve ever made an avatar for VRChat  
+Take {Y} if you{APOSTROPHE}d argue when someone calls you a bottom  
+Take {X} if you{APOSTROPHE}ve ever had something stolen from you  
+Give {Z} if you have a beard  
+Take {X} if your main music app is Spotify  
+Give {Y} if you{APOSTROPHE}ve watched more than 5 seasons of a TV show in one sitting  
+Take {Z} if you{APOSTROPHE}ve ever left the IN server  
+Take {X} if you{APOSTROPHE}ve ever taken a nude  
+Take {Y} if you{APOSTROPHE}re an enjoyer of feet  
+Give {X} if you have a gym membership  
+Take {X}, Give {X}  
+Take {Y}, Give {Y}  
+Take {Z}, Give {Z}  
+Take {Y} if you{APOSTROPHE}ve spent over 2000$ on VRChat (Hardware/Avatars/Etc.)  
+Take {X} if you flew here  
+Take {Y} if you{APOSTROPHE}ve adopted a kid in VRC  
+Be a mute until your next turn. Take {Z} on failure  
+Take {X} if you{APOSTROPHE}re a cat person  
+Take {X} if you{APOSTROPHE}re a dog person  
+Take an actual shot  
+Spin again without using your hands  
+Take {Y} if you{APOSTROPHE}d let someone in the room spit their drink in your mouth like a momma bird  
+Take {Z} if you{APOSTROPHE}ve ever been so poor you had to skip a meal

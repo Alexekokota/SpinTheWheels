@@ -1,3 +1,6 @@
+#ifndef WHEEL_H
+#define WHEEL_H
+
 #pragma once
 #include <vector>
 #include <string>
@@ -40,3 +43,5 @@ private:
     std::vector<Section> sections;
     std::vector<std::string> challenges;
 };
+
+#endif // WHEEL_H

@@ -28,7 +28,8 @@ int main() {
     DifficultyLevel currentDifficulty = HARD; // Set initial difficulty level
     Wheel wheel;
     std::string currentChallenge; // Store the current challenge
-
+	
+    ToggleFullscreen();
     while (!WindowShouldClose()) {
         if (IsKeyPressed(KEY_DOWN)) {
             currentChallenge.clear(); // Clear the current challenge at the start of the spin

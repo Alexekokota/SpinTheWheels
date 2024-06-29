@@ -1,3 +1,5 @@
+#ifndef DIFFICULTYLEVELS_H
+#define DIFFICULTYLEVELS_H
 #pragma once
 
 #include <unordered_map>
@@ -18,3 +20,5 @@ public:
 private:
     std::unordered_map<DifficultyLevel, std::unordered_map<std::string, int>> settings;
 };
+
+#endif // DIFFICULTYLEVELS_H
