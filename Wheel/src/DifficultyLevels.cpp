@@ -4,8 +4,8 @@
 DifficultySettings::DifficultySettings() {
     // Define values for each difficulty level
     settings[EASY] = {{"X", 1}, {"Y", 2}, {"Z", 3}};
-    settings[MEDIUM] = {{"X", 2}, {"Y", 3}, {"Z", 4}};
-    settings[HARD] = {{"X", 3}, {"Y", 4}, {"Z", 5}};
+    settings[MEDIUM] = {{"X", 2}, {"Y", 4}, {"Z", 5}};
+    settings[HARD] = {{"X", 4}, {"Y", 7}, {"Z", 9}};
 }
 
 int DifficultySettings::GetValue(DifficultyLevel level, const std::string& variable) const {

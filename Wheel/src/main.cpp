@@ -29,7 +29,6 @@ int main() {
     Wheel wheel;
     std::string currentChallenge; // Store the current challenge
 	
-    ToggleFullscreen();
     while (!WindowShouldClose()) {
         if (IsKeyPressed(KEY_DOWN)) {
             currentChallenge.clear(); // Clear the current challenge at the start of the spin
@@ -74,7 +73,7 @@ int main() {
             DrawTextPro(font, challengeWithValues.c_str(), topCenterPos, originTopCenter, 180.0f, static_cast<float>(fontSize), 1.0f, WHITE); // 180 degrees (upside down)
             
             // Draw at the bottom centered
-            DrawTextEx(font, challengeWithValues.c_str(), Vector2{static_cast<float>(screenWidth / 2 - textWidth / 2), static_cast<float>(screenHeight - 50 - textHeight)}, fontSize, 1, WHITE);
+            DrawTextEx(font, challengeWithValues.c_str(), Vector2{static_cast<float>(screenWidth / 2 - textWidth / 2), static_cast<float>(screenHeight - 30 - textHeight)}, fontSize, 1, WHITE);
 
             // Calculate position for left text
             Vector2 leftPos = {50, static_cast<float>(screenHeight / 2)};

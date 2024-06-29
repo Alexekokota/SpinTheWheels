@@ -13,6 +13,7 @@
 #include "utils.h"
 #include <unordered_map>
 #include "DifficultyLevels.h"
+#include <rlgl.h>
 
 Wheel::Wheel()
 {
@@ -41,10 +42,15 @@ Wheel::Wheel()
 
     // Define sections with random challenges
     float sectionAngle = 360.0f / 6; // Divide the wheel into six equal sections
+    Color purple1 = {127, 0, 225, 255}; // Darker purple
+    Color purple2 = {195, 177, 255, 255}; // Lighter purple
     for (int i = 0; i < 6; ++i)
     {
+        // Alternate between two shades of purple
+        Color sectionColor = (i % 2 == 0) ? purple1 : purple2;
+
         // Assign the next challenge to the current section
-        sections.push_back({std::to_string(i + 1), challenges[i], i * sectionAngle, (i + 1) * sectionAngle, ColorFromHSV((i * 60) % 360, 0.5f, 1.0f)});
+        sections.push_back({std::to_string(i + 1), challenges[i], i * sectionAngle, (i + 1) * sectionAngle, sectionColor});
     }
 
     spinSound = LoadSound("Spin.wav");
@@ -175,8 +181,27 @@ void Wheel::Draw(const DifficultySettings& difficultySettings, DifficultyLevel c
         // Calculate the total height of the text block after wrapping
         float totalTextHeight = lines.size() * (fontSize + 2);
 
-        // Adjust textY to center vertically
-        textY -= totalTextHeight / 2;
+        // Determine if the section is in the bottom half of the wheel
+        bool isBottomSection = (centerAngle > 180.0f && centerAngle < 360.0f);
+
+        if (isBottomSection)
+        {
+            // Save current transform matrix
+            rlPushMatrix();
+
+            // Translate to text position and rotate 180 degrees around the center of the text block
+            rlTranslatef(textX, textY, 0);
+            rlRotatef(180, 0, 0, 1);
+            rlTranslatef(-textX + 10, -textY, 0);
+
+            // Adjust textY to center vertically
+            textY += totalTextHeight / 2 - 50;
+        }
+        else
+        {
+            // Adjust textY to center vertically
+            textY -= totalTextHeight / 2;
+        }
 
         // Draw each line of text
         for (size_t i = 0; i < lines.size(); ++i)
@@ -188,6 +213,12 @@ void Wheel::Draw(const DifficultySettings& difficultySettings, DifficultyLevel c
 
             // Draw the text line
             DrawTextEx(font, lines[i].c_str(), Vector2{lineX, lineY}, fontSize, 1, BLACK);
+        }
+
+        if (isBottomSection)
+        {
+            // Restore previous transform matrix
+            rlPopMatrix();
         }
     }
 
@@ -204,7 +235,6 @@ void Wheel::Draw(const DifficultySettings& difficultySettings, DifficultyLevel c
     // Draw center
     DrawCircle(x, y, 4, RED);
 }
-
 
 void Wheel::StartSpinning()
 {
